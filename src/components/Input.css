@@ -1,0 +1,20 @@
+.input-wrapper {
+  display: flex;
+}
+
+.input-container:first-of-type {
+  margin-right: 50px
+}
+
+.input-box {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 35px;
+  border: 2px solid grey;
+  padding: 0 10px;
+}
+
+.input-label {
+  display: flex;
+  margin-bottom: 10px;
+}
