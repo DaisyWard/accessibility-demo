@@ -14,7 +14,20 @@
   padding: 0 10px;
 }
 
+.input-box:focus-visible {
+  border-color: black;
+  outline: none;
+}
+
 .input-label {
   display: flex;
   margin-bottom: 10px;
+}
+
+.input-box-error {
+  border: 2px solid red;
+}
+
+.input-error-message {
+  margin: 5px 0;
 }
