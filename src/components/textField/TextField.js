@@ -1,6 +1,14 @@
-import './Input.css'
+import './TextField.css'
 
-const Input = ({ id, label, explanationText, required, hasError, errorMessage }) => {
+const TextField = ({
+  id,
+  label,
+  explanationText,
+  required,
+  hasError,
+  errorMessage,
+  maxLength
+}) => {
   return (
     <div className='input-container'>
       <label className='input-label' htmlFor={id}>{label}</label>
@@ -9,14 +17,15 @@ const Input = ({ id, label, explanationText, required, hasError, errorMessage })
         className={`input-box ${hasError ? 'input-box-error' : ''}`}
         id={id}
         type='text'
-        maxLength={35}
+        maxLength={maxLength ? maxLength : 35}
         aria-label={explanationText ? `${label} ${explanationText}` : label}
         aria-required={required}
         aria-invalid={hasError}
+        // name ? 
       />
       {hasError && <p role='alert' aria-describedby={id} className='input-error-message'>{errorMessage}</p>}
     </div>
   )
 }
 
-export default Input
+export default TextField
