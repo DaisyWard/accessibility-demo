@@ -1,23 +1,33 @@
+import { useState } from 'react'
 import './dropdown.css'
 
-const Dropdown = ({ id, label, explanationText, required, hasError }) => {
+const Dropdown = ({ id, label, required, hasErrored, data, errorMessage }) => {
+
+  const [showError, setShowError] = useState(true)
+
+  const checkErrorState = (event) => {
+    if (hasErrored && event.target.value === '') setShowError(true)
+    else setShowError(false)
+  }
+
   return (
     <div className='select-wrapper'>
-    <label className='select-label'>Select your favourite TV show</label>
-    <select className='select-input'>
-      <option>Please Select</option>
-      <option>Halo</option>
-      <option>The Last Kingdom</option>
-      <option>Bridgerton</option>
-      <option>Top Boy</option>
-      <option>Peaky Blinders</option>
-      <option>The Walking Dead</option>
-      <option>Eurphoria</option>
-      <option>Attack on Titan</option>
-      <option>Human Resources</option>
-      <option>The Gilded Age</option>
-      <option>Game of Thrones</option>
-    </select>
+      <label className='select-label' htmlFor={id}>{label}</label>
+      <select
+        id={id}
+        className={`select-input ${hasErrored && showError? 'select-box-error' : ''}`}
+        aria-labelledby={id}
+        aria-invalid={hasErrored && showError}
+        aria-required={required}
+        name={id}
+        onChange={(event) => checkErrorState(event)}
+      >
+        <option value='' disabled selected>Please select</option>
+        {data.map(show =>
+          <option key={show.id}>{show.name}</option>
+        )}
+      </select>
+      {hasErrored && showError && <p className='select-error-message' role='alert'>{errorMessage}</p>}
     </div>
   )
 }

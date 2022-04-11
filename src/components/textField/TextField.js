@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import './TextField.css'
 
 const TextField = ({
@@ -5,25 +7,35 @@ const TextField = ({
   label,
   explanationText,
   required,
-  hasError,
+  hasErrored,
   errorMessage,
   maxLength
 }) => {
+
+  const [showError, setShowError] = useState(true)
+
+  const checkErrorState = (event) => {
+    if (hasErrored && event.target.value === '') setShowError(true)
+    else setShowError(false)
+  }
+
   return (
     <div className='input-container'>
       <label className='input-label' htmlFor={id}>{label}</label>
       {/* Tooltip */}
       <input
-        className={`input-box ${hasError ? 'input-box-error' : ''}`}
+        className={`input-box ${hasErrored && showError ? 'input-box-error' : ''}`}
         id={id}
         type='text'
         maxLength={maxLength ? maxLength : 35}
         aria-label={explanationText ? `${label} ${explanationText}` : label}
-        aria-required={required}
-        aria-invalid={hasError}
-        // name ? 
+        required={required}
+        aria-invalid={hasErrored && showError}
+        name={label}
+        onChange={(event) => checkErrorState(event)}
+        autoComplete={'off'}
       />
-      {hasError && <p role='alert' aria-describedby={id} className='input-error-message'>{errorMessage}</p>}
+      {hasErrored && showError && <p role='alert' aria-describedby={id} className='input-error-message'>{errorMessage}</p>}
     </div>
   )
 }

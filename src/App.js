@@ -5,13 +5,13 @@ import React, { useState } from 'react'
 
 import TextField from './components/textField/TextField'
 import Dropdown from './components/dropdown/Dropdown'
-import RadioButton from './components/radioButton/RadioButton'
+import RadioButtons from './components/radioButtons/RadioButtons'
 import Checkbox from './components/checkbox/Checkbox'
 
 import logoPNG from './images/logo.png'
 import searchPNG from './images/search.png'
 
-import radioButtonData from './data/radioButton'
+import dropdownData from './data/dropdown'
 
 function App() {
   const [errorState, setErrorState] = useState(false)
@@ -30,42 +30,43 @@ function App() {
           <h2>Personal Details</h2>
           <h3 className='as-h4'>Tell us a bit about yourself</h3>
         </div>
-        <div className='input-wrapper'>
-          <TextField
-            id='firstName'
-            label='First Name'
-            required
-            hasError={errorState}
-            errorMessage={'Please enter your first name'}
-          />
-          <TextField
-            id='lastName'
-            label='Last Name'
-            required
-            hasError={errorState}
-            errorMessage={'Please enter your last name'}
-          />
-        </div>
-        <Dropdown />
 
-        <div role='radiogroup' className='radio-buttons' aria-labelledby='animal-radio-buttons'>
-          <p id='animal-radio-buttons'>Select your favourite pet</p>
-          {radioButtonData.map(animal =>
-            <RadioButton
-              key={animal.id}
-              id={animal.id}
-              label={animal.label}
-              name='animal'
-              // value?
-              // checked?
+        <form>
+          <div className='input-wrapper'>
+            <TextField
+              id='firstName'
+              label='First Name'
+              required
+              hasErrored={errorState}
+              errorMessage={'Please enter your first name'}
             />
-          )}
-          {errorState && <p role='alert'>Please select a pet</p>}
-        </div>
+            <TextField
+              id='lastName'
+              label='Last Name'
+              required
+              hasErrored={errorState}
+              errorMessage={'Please enter your last name'}
+            />
+          </div>
+          <Dropdown
+            id='tvDropdown'
+            label='Select your favourite TV show'
+            required={true}
+            hasErrored={errorState}
+            data={dropdownData}
+            errorMessage={'Please select a TV show from the list'}
+          />
 
-        {/* Custom toggle button - PHC/MFV? */}
+          <RadioButtons
+            label={'Select your favourite pet'}
+            hasErrored={errorState}
+            errorMessage={'Please select a pet'}
+          />
 
-        <div>
+          <h4 className='as-h3'>Some additional things we need to know...</h4>
+
+          {/* Custom toggle button - PHC/MFV? */}
+
           <Checkbox
             htmlLabel={'I accept the terms and conditions'}
             name='privacy'
@@ -76,21 +77,17 @@ function App() {
             hasErrored={false}
             required
           />
-        </div>
 
-        <h4 className='as-h3'>Some additional things we need to know...</h4>
-
-
-        {/* Another h tag, not in order */}
-        {/* Button for a modal popup form
-          will including button as a link
-          Roving tab - PHC?
-        */}
+          {/* Button for a modal popup form
+            will including button as a link
+            Roving tab - PHC?
+          */}
 
 
-        {/* Button to trigger loading spinner - Stretch*/}
-        {/* Set up Eslint A11y */}
-        <button className='button submit-button' aria-label='Submit personal details form' onClick={() => setErrorState(!errorState)}>Submit</button>
+          {/* Button to trigger loading spinner - Stretch*/}
+          {/* Set up Eslint A11y */}
+          <button className='button submit-button' type='button' aria-label='Submit personal details form' onClick={() => setErrorState(!errorState)}>Submit</button>
+        </form>
       </section>
     </div>
   );

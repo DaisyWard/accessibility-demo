@@ -26,14 +26,14 @@ const Checkbox = ({
         />
         <label
           dangerouslySetInnerHTML={{__html: htmlLabel}}
-          htmlFor={name}
+          htmlFor={id}
           className='form-checkbox-label'
         >
           {label}
         </label>
         <span className='form-checkbox-checkmark' onClick={() => console.log('goose')} onChange={() => console.log('goose')} />
       </div>
-      {hasErrored && <p className='form-field-error-text js-form-field-haserror' role='alert'>{errorMessage}</p>}
+      {hasErrored && <p className='checkbox-error-message' role='alert'>{errorMessage}</p>}
     </div>
   )
 }

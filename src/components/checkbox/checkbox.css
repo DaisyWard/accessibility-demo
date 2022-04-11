@@ -22,3 +22,22 @@
 .form-privacy-label-link {
   margin-left: 4px;
 } */
+
+.form-checkbox-container {
+  display: flex;
+  line-height: 19px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-checkbox-input {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-checkbox-label {
+  margin-left: 10px;
+  cursor: pointer;
+}

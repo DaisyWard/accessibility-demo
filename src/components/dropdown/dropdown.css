@@ -1,6 +1,6 @@
 .select-input {
   -webkit-appearance: none;
-  width: 300px;
+  width: 324px;
   height: 39px;
   border: 2px solid grey;
   padding: 0 10px;
@@ -15,4 +15,18 @@
 
 .select-label {
   margin-bottom: 10px;
+}
+
+.select-box-error {
+  border: 2px solid red;
+}
+
+.select-input:focus-visible {
+  border-color: black;
+  outline: none;
+}
+
+.select-error-message {
+  margin: 5px 0;
+  /* color: red; */
 }
