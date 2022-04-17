@@ -8,6 +8,7 @@ import Dropdown from './components/dropdown/Dropdown'
 import RadioButtons from './components/radioButtons/RadioButtons'
 import Checkbox from './components/checkbox/Checkbox'
 import ToggleButtons from './components/toggleButtons/ToggleButtons'
+import Modal from './components/modal/Modal'
 
 import logoPNG from './images/logo.png'
 import searchPNG from './images/search.png'
@@ -17,6 +18,7 @@ import toggleButtonData from './data/toggleButton'
 
 function App() {
   const [errorState, setErrorState] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <div className='App'>
@@ -91,8 +93,14 @@ function App() {
             Roving tab - PHC?
           */}
 
-          <button className='button' type='button' onClick={() => console.log('goose')}>Open modal</button>
+          <button className='button' type='button' aria-label='Read the terms and conditions in a dialog window' onClick={() => setShowModal(true)}>Read the terms and conditions</button>
 
+          {showModal &&
+            <Modal
+              id='tandcs'
+              closeModal={() => setShowModal(false)}
+            />
+          }
 
           {/* Button to trigger loading spinner - Stretch*/}
           {/* Set up Eslint A11y */}

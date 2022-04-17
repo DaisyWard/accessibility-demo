@@ -1,0 +1,36 @@
+.modal-background {
+  align-items: center;
+  background-color: rgba(0,0,0,.3);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: 24px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 49;
+}
+
+.modal-wrapper {
+  background-color: white;
+  margin: auto;
+  max-height: 88vh;
+  max-width: 994px;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+}
+
+.modal-close {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 30px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-family: cursive;
+  font-size: 44px;
+}

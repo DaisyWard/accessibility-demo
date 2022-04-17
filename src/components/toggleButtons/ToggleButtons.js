@@ -25,6 +25,7 @@ const ToggleButtons = ({
             selected={selectedOption === option.id}
             ariaLabel={option.ariaLabel}
             updateSelectedOption={() => setSelectedOption(option.id)}
+            // required
           />
         )}
       </div>

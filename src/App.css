@@ -67,3 +67,8 @@ h4,
 .additional-header {
   margin-top: 30px;
 }
+
+.noscroll {
+  overflow: hidden;
+  height: 100vh;
+}
