@@ -25,11 +25,11 @@ const ToggleButtons = ({
             selected={selectedOption === option.id}
             ariaLabel={option.ariaLabel}
             updateSelectedOption={() => setSelectedOption(option.id)}
-            // required
+            hasError={hasErrored && selectedOption === false}
           />
         )}
       </div>
-      {hasErrored && <p role='alert' className='toggle-button-error-message'>{errorMessage}</p>}
+      {hasErrored && selectedOption === false && <p role='alert' className='toggle-button-error-message'>{errorMessage}</p>}
     </div>
   )
 }

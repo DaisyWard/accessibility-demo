@@ -4,11 +4,12 @@ const ToggleButton = ({
   label,
   ariaLabel,
   selected,
-  updateSelectedOption
+  updateSelectedOption,
+  hasError
 }) => {
   return (
     <button
-      className={`toggle-button ${selected ? 'toggle-button-selected' : ''}`}
+      className={`toggle-button ${selected ? 'toggle-button-selected' : ''} ${hasError ? 'toggle-button-error' : ''}`}
       type='button'
       onClick={() => updateSelectedOption()}
       aria-label={selected ? `${ariaLabel} selected` : `${ariaLabel}`}

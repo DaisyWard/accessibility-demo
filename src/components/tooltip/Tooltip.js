@@ -4,8 +4,8 @@ import './tooltip.css'
 
 const Tooltip = ({ tooltipText }) => {
   return (
-    <div role='tooltip' class='tooltip'>i
-      <p class='tooltip-text'>{tooltipText}</p>
+    <div role='tooltip' className='tooltip'>i
+      <p className='tooltip-text'>{tooltipText}</p>
     </div>
   )
 }

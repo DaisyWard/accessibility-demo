@@ -85,14 +85,9 @@ function App() {
             value={false}
             checked={false}
             errorMessage='Please accept the terms and conditions'
-            hasErrored={false}
+            hasErrored={errorState}
             required
           />
-
-          {/* Button for a modal popup form
-            will including button as a link
-            Roving tab - PHC?
-          */}
 
           <button
             className='button'
@@ -110,7 +105,6 @@ function App() {
             />
           }
 
-          {/* Button to trigger loading spinner - Stretch*/}
           {/* Set up Eslint A11y */}
           <button className='button submit-button' type='button' aria-label='Submit personal details form' onClick={() => setErrorState(!errorState)}>Submit</button>
         </form>

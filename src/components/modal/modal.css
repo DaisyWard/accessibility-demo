@@ -34,3 +34,11 @@
   font-family: cursive;
   font-size: 44px;
 }
+
+.modal-buttons {
+  display: flex;
+}
+
+.modal-button-first {
+  margin-right: 10px;
+}

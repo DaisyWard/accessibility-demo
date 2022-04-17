@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './checkbox.css'
 
 const Checkbox = ({
@@ -12,6 +12,9 @@ const Checkbox = ({
   hasErrored,
   required
 }) => {
+
+  const [checkboxChecked, setCheckboxChecked] = useState(false)
+
   return (
     <div className='form-checkbox'>
       <div className='form-checkbox-container'>
@@ -23,6 +26,7 @@ const Checkbox = ({
           type='checkbox'
           aria-required={required}
           aria-invalid={hasErrored}
+          onClick={(event) => setCheckboxChecked(event.target.checked)}
         />
         <label
           dangerouslySetInnerHTML={{__html: htmlLabel}}
@@ -31,9 +35,9 @@ const Checkbox = ({
         >
           {label}
         </label>
-        <span className='form-checkbox-checkmark' onClick={() => console.log('goose')} onChange={() => console.log('goose')} />
+        <span className='form-checkbox-checkmark' />
       </div>
-      {hasErrored && <p className='checkbox-error-message' role='alert'>{errorMessage}</p>}
+      {hasErrored && !checkboxChecked && <p className='checkbox-error-message' role='alert'>{errorMessage}</p>}
     </div>
   )
 }

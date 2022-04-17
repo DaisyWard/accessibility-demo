@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './search.css'
 
 import searchPNG from '../../images/search.png'
@@ -8,7 +8,7 @@ const Search = () => {
   return (
     <div className='search-wrapper'>
       <form id='search' action='/search' method='get' role='search'>
-        <label class='sr-only' htmlFor='goose'>Search</label>
+        <label className='sr-only' htmlFor='goose'>Search</label>
         <input
           className='search-input'
           name='Search'
