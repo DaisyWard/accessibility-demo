@@ -8,6 +8,6 @@
   cursor: pointer;
 }
 
-.submit-button:hover {
+.button:hover {
   background-color: grey;
 }

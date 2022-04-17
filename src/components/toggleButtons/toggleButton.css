@@ -1,0 +1,43 @@
+.toggle-button-wrapper {
+  display: flex;
+}
+
+.toggle-buttons-label {
+  display: block;
+  margin: 30px 0 10px 0;
+}
+
+.toggle-button {
+  display: block;
+  padding: 20px 70px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #00518F;
+  font-size: 16px;
+}
+
+.toggle-button:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toggle-button:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.toggle-button:hover {
+  background-color: #00518F;
+  color: white;
+}
+
+.toggle-button-selected {
+  background-color: #00518F;
+  color: white;
+}
+
+.toggle-button-error-message {
+  margin-bottom: 30px;
+}

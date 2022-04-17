@@ -21,7 +21,7 @@ const TextField = ({
 
   return (
     <div className='input-container'>
-      <label className='input-label' htmlFor={id}>{label}</label>
+      <label className='input-label label' htmlFor={id}>{label}</label>
       {/* Tooltip */}
       <input
         className={`input-box ${hasErrored && showError ? 'input-box-error' : ''}`}

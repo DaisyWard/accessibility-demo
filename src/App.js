@@ -7,11 +7,13 @@ import TextField from './components/textField/TextField'
 import Dropdown from './components/dropdown/Dropdown'
 import RadioButtons from './components/radioButtons/RadioButtons'
 import Checkbox from './components/checkbox/Checkbox'
+import ToggleButtons from './components/toggleButtons/ToggleButtons'
 
 import logoPNG from './images/logo.png'
 import searchPNG from './images/search.png'
 
 import dropdownData from './data/dropdown'
+import toggleButtonData from './data/toggleButton'
 
 function App() {
   const [errorState, setErrorState] = useState(false)
@@ -54,7 +56,7 @@ function App() {
             required={true}
             hasErrored={errorState}
             data={dropdownData}
-            errorMessage={'Please select a TV show from the list'}
+            errorMessage='Please select a TV show from the list'
           />
 
           <RadioButtons
@@ -63,17 +65,23 @@ function App() {
             errorMessage={'Please select a pet'}
           />
 
-          <h4 className='as-h3'>Some additional things we need to know...</h4>
+          <h4 className='additional-header as-h3'>Some additional things we need to know...</h4>
 
-          {/* Custom toggle button - PHC/MFV? */}
+          <ToggleButtons
+            data={toggleButtonData}
+            label='Do you own an electric car?'
+            errorMessage='Please select an option'
+            required={true}
+            hasErrored={errorState}
+          />
 
           <Checkbox
-            htmlLabel={'I accept the terms and conditions'}
+            htmlLabel='I accept the terms and conditions'
             name='privacy'
             id='privacy'
             value={false}
             checked={false}
-            errorMessage={'Please accept the terms and conditions'}
+            errorMessage='Please accept the terms and conditions'
             hasErrored={false}
             required
           />
@@ -82,6 +90,8 @@ function App() {
             will including button as a link
             Roving tab - PHC?
           */}
+
+          <button className='button' type='button' onClick={() => console.log('goose')}>Open modal</button>
 
 
           {/* Button to trigger loading spinner - Stretch*/}

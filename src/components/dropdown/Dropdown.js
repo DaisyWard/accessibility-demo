@@ -12,7 +12,7 @@ const Dropdown = ({ id, label, required, hasErrored, data, errorMessage }) => {
 
   return (
     <div className='select-wrapper'>
-      <label className='select-label' htmlFor={id}>{label}</label>
+      <label className='select-label label' htmlFor={id}>{label}</label>
       <select
         id={id}
         className={`select-input ${hasErrored && showError? 'select-box-error' : ''}`}

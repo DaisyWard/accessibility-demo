@@ -14,7 +14,7 @@ const RadioButton = ({
 
   return (
     <fieldset role='radiogroup' className='radio-buttons' aria-labelledby='animal-radio-buttons'>
-      <legend id='animal-radio-buttons' className='radio-buttons-label'>{label}</legend>
+      <legend id='animal-radio-buttons' className='radio-buttons-label label'>{label}</legend>
 
       {radioButtonData.map(animal =>
         <RadioButtonItem
