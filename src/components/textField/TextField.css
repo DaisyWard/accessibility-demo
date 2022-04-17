@@ -19,6 +19,10 @@
   outline: none;
 }
 
+.input-label-wrapper {
+  display: flex;
+}
+
 .input-label {
   display: flex;
   margin-bottom: 10px;

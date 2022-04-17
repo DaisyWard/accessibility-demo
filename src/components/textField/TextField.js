@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import './TextField.css'
 
+import Tooltip from '../tooltip/Tooltip'
+
 const TextField = ({
   id,
   label,
@@ -9,7 +11,8 @@ const TextField = ({
   required,
   hasErrored,
   errorMessage,
-  maxLength
+  maxLength,
+  tooltipText
 }) => {
 
   const [showError, setShowError] = useState(true)
@@ -21,19 +24,21 @@ const TextField = ({
 
   return (
     <div className='input-container'>
-      <label className='input-label label' htmlFor={id}>{label}</label>
-      {/* Tooltip */}
+      <div className='input-label-wrapper'>
+        <label className='input-label label' htmlFor={id}>{label}</label>
+        {tooltipText && <Tooltip tooltipText={tooltipText} />}
+      </div>
       <input
         className={`input-box ${hasErrored && showError ? 'input-box-error' : ''}`}
         id={id}
         type='text'
         maxLength={maxLength ? maxLength : 35}
-        aria-label={explanationText ? `${label} ${explanationText}` : label}
+        aria-label={tooltipText ? `${label} ${tooltipText}` : label}
         required={required}
         aria-invalid={hasErrored && showError}
         name={label}
         onChange={(event) => checkErrorState(event)}
-        autoComplete={'off'}
+        autoComplete='off'
       />
       {hasErrored && showError && <p role='alert' aria-describedby={id} className='input-error-message'>{errorMessage}</p>}
     </div>

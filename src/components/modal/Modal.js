@@ -21,7 +21,7 @@ const Modal = ({
   return (
     createPortal (
       <FocusTrap>
-        <div role='dialog' aria-labelledby='dialog-title' describedby='dialog-desc'>
+        <div role='dialog' aria-modal='true' aria-labelledby='dialog-title' describedby='dialog-desc'>
           <div className='modal-wrapper'>
             <p id='dialog-title' className='as-h1'>Terms and Conditions</p>
             <p id='dialog-desc'>Please fully read the following terms and conditions before proceeding</p>

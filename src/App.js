@@ -42,7 +42,8 @@ function App() {
               label='First Name'
               required
               hasErrored={errorState}
-              errorMessage={'Please enter your first name'}
+              errorMessage='Please enter your first name'
+              tooltipText='You do not need to include any middle names'
             />
             <TextField
               id='lastName'
@@ -93,7 +94,14 @@ function App() {
             Roving tab - PHC?
           */}
 
-          <button className='button' type='button' aria-label='Read the terms and conditions in a dialog window' onClick={() => setShowModal(true)}>Read the terms and conditions</button>
+          <button
+            className='button'
+            type='button'
+            aria-label='Read the terms and conditions in a dialog window'
+            onClick={() => setShowModal(true)}
+          >
+            Read the terms and conditions
+          </button>
 
           {showModal &&
             <Modal
