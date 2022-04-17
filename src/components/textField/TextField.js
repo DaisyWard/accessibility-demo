@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import './TextField.css'
+import './textField.css'
 
 import Tooltip from '../tooltip/Tooltip'
 

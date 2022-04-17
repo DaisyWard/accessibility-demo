@@ -9,9 +9,9 @@ import RadioButtons from './components/radioButtons/RadioButtons'
 import Checkbox from './components/checkbox/Checkbox'
 import ToggleButtons from './components/toggleButtons/ToggleButtons'
 import Modal from './components/modal/Modal'
+import Search from './components/search/Search'
 
 import logoPNG from './images/logo.png'
-import searchPNG from './images/search.png'
 
 import dropdownData from './data/dropdown'
 import toggleButtonData from './data/toggleButton'
@@ -27,7 +27,7 @@ function App() {
           <img className='logo' alt={`Daisy's accessible demo logo. Navigate to home page`} src={logoPNG} />
           <h1>Daisy's Accessibility Demo</h1>
         </div>
-        <img className='search-icon' alt={'Sitewide search'} src={searchPNG} />
+        <Search />
       </header>
       <section>
         <div className='headers'>

@@ -1,0 +1,29 @@
+.search-input {
+  -webkit-appearance: none;
+  width: 350px;
+  height: 51px;
+  border: 0;
+  border-bottom: 2px solid grey;
+  padding: 0 10px;
+}
+
+.search-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.search-button {
+  background-color: white;
+  border: 0;
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.search-icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
