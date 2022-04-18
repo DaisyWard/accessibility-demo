@@ -24,7 +24,9 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <div className='App-Header-Logo'>
-          <img className='logo' alt={`Daisy's accessible demo logo. Navigate to home page`} src={logoPNG} />
+          <a href='/' aria-label='Navigate to home page'>
+            <img className='logo' alt={`Daisy's accessible demo logo`} src={logoPNG} />
+          </a>
           <h1>Daisy's Accessibility Demo</h1>
         </div>
         <Search />
