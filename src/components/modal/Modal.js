@@ -9,7 +9,6 @@ const Modal = ({
   id,
   closeModal
 }) => {
-
   const target = usePortal(id)
   target.classList.add('modal-background')
 

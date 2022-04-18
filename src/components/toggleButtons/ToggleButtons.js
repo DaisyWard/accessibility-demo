@@ -10,7 +10,6 @@ const ToggleButtons = ({
   ariaLabel,
   hasErrored
 }) => {
-
   const [selectedOption, setSelectedOption] = useState(false)
 
   return (
