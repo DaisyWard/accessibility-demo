@@ -29,11 +29,12 @@ function App() {
         </div>
         <Search />
       </header>
-      <section>
+      <main>
         <div className='headers'>
           <h2>Personal Details</h2>
           <h3 className='as-h4'>Tell us a bit about yourself</h3>
         </div>
+
 
         <form>
           <div className='input-wrapper'>
@@ -108,7 +109,7 @@ function App() {
           {/* Set up Eslint A11y */}
           <button className='button submit-button' type='button' aria-label='Submit personal details form' onClick={() => setErrorState(!errorState)}>Submit</button>
         </form>
-      </section>
+      </main>
     </div>
   );
 }
