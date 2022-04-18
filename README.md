@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Daisy's Accessibility Demo
+This repo was created to help show examples of how to make basic, common components with good accessibility
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Running the Project](#running-the-project)
+- [ESLint A11y Tool](#eslint-a11y-tool)
+- [Components](#components)
+- [What not to use this Repo for](#what-not-to-use-this-repo-for)
 
-In the project directory, you can run:
+## Running the Project
+This project uses Create React App.
 
-### `npm start`
+`npm start` to run the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ESlint A11y Tool
+Setup in this project is an example of how to setup ESLint A11y.
 
-### `npm test`
+`npm a11y` is a custom script added to the repo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+.eslintrc.json file was also added with streamlined config options. This configuration file can be expanded but this config works as a good starting point.
 
-### `npm run build`
+See [ESLint A11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) for more details
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you are using VSCode the ESLint extension will work with this setup and flag issues.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+See extensions.js for the recommended plugin
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Components
+### Checkbox
+Accessibility Considerations
+- aria-required
+- aria-invalid
+- aria-required
+- Associated label with input without the label wrapping around the input
+- Role on error message
+- Error state and error message
 
-### `npm run eject`
+### Dropdown
+Accessibility Considerations
+- aria-labelledby
+- aria-invalid
+- aria-required
+- How to set a default value
+- Role on error message
+- Error state and error message
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Modal
+Accessibility Considerations
+- Trapped focus using external package
+- aria-modal
+- aria-labelledby
+- Dialog Role
+- describedby
+- aria-label
+- Large target size using padding
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Radio Buttons
+- Use of fieldset
+- Use of legend
+- Error state and error message
+- required
+- Being able to click on the label to activate the rdio button
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Search
+- Use of form
+- Search Role
+- Associated label to input
+- Type Search
+- Accessible icon button
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Text Field
+- aria-label
+- required
+- aria-invalid
+- name
+- Role on error message
+- Error state and error message
+- Associated label with input without the label wrapping around the input
 
-## Learn More
+### Toggle Buttons
+- Using a none recommended element and making it accessible
+- aria-label
+- Associated label with custom elements
+- Error state and error message
+- Role on error message
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Tooltip
+- You should be able to achieve this through id but it wasn't working for me so I came up with another option.
+- See TextField and aria-label to see how I achieved this
+- See [ARIA: tooltip role](#https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) for further implementation suggestions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## What not to use this Repo for
+This repo focuses on good accessibility implementation. It doesn't follow coding best practices in places. If you use any code from this repo, make sure to follow your team's coding standards.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
