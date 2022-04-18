@@ -4,16 +4,15 @@ import './search.css'
 import searchPNG from '../../images/search.png'
 
 const Search = () => {
-
   return (
     <div className='search-wrapper'>
       <form id='search' action='/search' method='get' role='search'>
-        <label className='sr-only' htmlFor='goose'>Search</label>
+        <label className='sr-only' htmlFor='search-input'>Search</label>
         <input
           className='search-input'
-          name='Search'
+          name='search-input'
           type='search'
-          id='goose'
+          id='search-input'
           autoComplete='off'
         />
       </form>
@@ -26,7 +25,8 @@ const Search = () => {
         <img
           className='search-icon'
           alt='Sitewide search'
-          src={searchPNG}  />
+          src={searchPNG}
+        />
       </button>
     </div>
   )
