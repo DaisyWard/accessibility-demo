@@ -11,11 +11,8 @@ const RadioButtonItem = ({
   checkErrorState
 }) => {
   return (
-    <div className='radio-button'
-      onClick={() => checkErrorState()}
-      onChange={() => checkErrorState()}
-    >
-      <label className='radio-button-label'>
+    <div className='radio-button'>
+      <label  className='radio-button-label'>
         <input
           className={`radio-button-input ${showError ? 'radio-button-error' : ''}`}
           id={id}
@@ -24,6 +21,9 @@ const RadioButtonItem = ({
           type='radio'
           defaultChecked={false}
           required={required}
+          onClick={() => checkErrorState()}
+          onChange={() => checkErrorState()}
+          onKeyPress={() => checkErrorState()}
         />
         {label}
       </label>
