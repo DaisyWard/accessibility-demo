@@ -12,7 +12,7 @@ const RadioButtonItem = ({
 }) => {
   return (
     <div className='radio-button'>
-      <label  className='radio-button-label'>
+      <label className='radio-button-label'>
         <input
           className={`radio-button-input ${showError ? 'radio-button-error' : ''}`}
           id={id}

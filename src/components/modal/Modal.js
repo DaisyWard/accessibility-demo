@@ -31,8 +31,8 @@ const Modal = ({
             <p>Fusce dignissim ornare cursus. Donec erat risus, scelerisque quis turpis eget, tristique tempor nisi. In sed porta justo. Phasellus eget pulvinar velit. Nulla vehicula nisi dolor, non laoreet nunc convallis a. In hendrerit ipsum eu tortor condimentum, et ultrices risus placerat. Integer quam erat, auctor sed metus vel, porttitor consequat lorem. Nam a est vel metus scelerisque placerat. Proin diam eros, dapibus at consectetur id, feugiat quis tortor. Etiam vitae dui vitae ipsum maximus viverra. Curabitur dui ipsum, bibendum sed rutrum aliquet, aliquam ac libero. Cras volutpat viverra quam in porta.</p>
             <p>Morbi aliquam neque nunc, vitae placerat purus pretium sed. Morbi metus ante, viverra ut consectetur in, vulputate ac sem. Nunc in dolor id erat porta vehicula sit amet in mauris. Etiam feugiat sit amet dolor ac gravida. Nulla ultricies enim vitae nibh sagittis sollicitudin. Vestibulum tristique tellus justo, ac egestas neque vestibulum ut. Nam at aliquet elit.</p>
             <div className='modal-buttons'>
-              <button className='button modal-button-first' aria-label='Close terms and conditions dialog'  onClick={() => closeModal()}>Close</button>
-              <a className='link-as-button' href='/goose'>Find out more</a>
+              <button className='button modal-button-first' aria-label='Close terms and conditions dialog' onClick={() => closeModal()}>Close</button>
+              <a className='link-as-button' href='/test'>Find out more</a>
             </div>
           </div>
         </div>
