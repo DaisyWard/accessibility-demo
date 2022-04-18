@@ -12,14 +12,13 @@ const Checkbox = ({
   hasErrored,
   required
 }) => {
-
   const [checkboxChecked, setCheckboxChecked] = useState(false)
 
   return (
     <div className='form-checkbox'>
       <div className='form-checkbox-container'>
         <input
-          className='form-checkbox-input'
+          className={`form-checkbox-input ${hasErrored ? 'form-checkbox-input-error' : ''}`}
           id={id}
           name={name}
           defaultChecked={checked}
