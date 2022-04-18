@@ -57,6 +57,7 @@ Accessibility Considerations
 - Large target size using padding
 
 ### Radio Buttons
+Accessibility Considerations
 - Use of fieldset
 - Use of legend
 - Error state and error message
@@ -64,6 +65,7 @@ Accessibility Considerations
 - Being able to click on the label to activate the rdio button
 
 ### Search
+Accessibility Considerations
 - Use of form
 - Search Role
 - Associated label to input
@@ -71,6 +73,7 @@ Accessibility Considerations
 - Accessible icon button
 
 ### Text Field
+Accessibility Considerations
 - aria-label
 - required
 - aria-invalid
@@ -80,6 +83,7 @@ Accessibility Considerations
 - Associated label with input without the label wrapping around the input
 
 ### Toggle Buttons
+Accessibility Considerations
 - Using a none recommended element and making it accessible
 - aria-label
 - Associated label with custom elements
@@ -87,10 +91,10 @@ Accessibility Considerations
 - Role on error message
 
 ### Tooltip
+Accessibility Considerations
 - You should be able to achieve this through id but it wasn't working for me so I came up with another option.
 - See TextField and aria-label to see how I achieved this
 - See [ARIA: tooltip role](#https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) for further implementation suggestions
 
 ## What not to use this Repo for
 This repo focuses on good accessibility implementation. It doesn't follow coding best practices in places. If you use any code from this repo, make sure to follow your team's coding standards.
-
