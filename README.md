@@ -55,6 +55,8 @@ Accessibility Considerations
 - describedby
 - aria-label
 - Large target size using padding
+- Focus visible
+- Accessible icon button
 
 ### Radio Buttons
 Accessibility Considerations
@@ -62,7 +64,7 @@ Accessibility Considerations
 - Use of legend
 - Error state and error message
 - required
-- Being able to click on the label to activate the rdio button
+- Being able to click on the label to activate the radio button
 
 ### Search
 Accessibility Considerations

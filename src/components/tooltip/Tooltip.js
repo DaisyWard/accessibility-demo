@@ -1,3 +1,5 @@
+// https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role
+
 import React from 'react'
 
 import './tooltip.css'

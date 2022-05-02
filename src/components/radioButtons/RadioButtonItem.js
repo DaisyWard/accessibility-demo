@@ -20,7 +20,7 @@ const RadioButtonItem = ({
           value={value}
           type='radio'
           defaultChecked={false}
-          required={required}
+          required={required} // https://userway.org/blog/html-required-versus-aria-required/
           onClick={() => checkErrorState()}
           onChange={() => checkErrorState()}
           onKeyPress={() => checkErrorState()}
