@@ -14,7 +14,6 @@ const TextField = ({
   maxLength,
   tooltipText
 }) => {
-
   const [showError, setShowError] = useState(true)
 
   const checkErrorState = (event) => {
@@ -29,18 +28,18 @@ const TextField = ({
         {tooltipText && <Tooltip tooltipText={tooltipText} />}
       </div>
       <input
-        className={`input-box ${hasErrored && showError ? 'input-box-error' : ''}`}
+        className={`input-box ${hasErrored && showError && required ? 'input-box-error' : ''}`}
         id={id}
         type='text'
         maxLength={maxLength ? maxLength : 35}
         aria-label={tooltipText ? `${label} ${tooltipText}` : label}
         required={required}
-        aria-invalid={hasErrored && showError}
+        aria-invalid={hasErrored && showError && required}
         name={label}
         onChange={(event) => checkErrorState(event)}
         autoComplete='off'
       />
-      {hasErrored && showError && <p role='alert' aria-describedby={id} className='input-error-message'>{errorMessage}</p>}
+      {hasErrored && showError && required && <p role='alert' aria-describedby={id} className='input-error-message'>{errorMessage}</p>}
     </div>
   )
 }

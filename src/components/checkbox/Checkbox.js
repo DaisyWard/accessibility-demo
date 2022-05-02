@@ -18,7 +18,7 @@ const Checkbox = ({
     <div className='form-checkbox'>
       <div className='form-checkbox-container'>
         <input
-          className={`form-checkbox-input ${hasErrored ? 'form-checkbox-input-error' : ''}`}
+          className={`form-checkbox-input ${hasErrored && !checkboxChecked ? 'form-checkbox-input-error' : ''}`}
           id={id}
           name={name}
           defaultChecked={checked}

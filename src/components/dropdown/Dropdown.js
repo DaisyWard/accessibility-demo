@@ -21,9 +21,9 @@ const Dropdown = ({
       <label className='select-label label' htmlFor={id}>{label}</label>
       <select
         id={id}
-        className={`select-input ${hasErrored && showError? 'select-box-error' : ''}`}
+        className={`select-input ${hasErrored && showError && required ? 'select-box-error' : ''}`}
         aria-labelledby={id}
-        aria-invalid={hasErrored && showError}
+        aria-invalid={hasErrored && showError && required}
         aria-required={required}
         name={id}
         onChange={(event) => checkErrorState(event)}
@@ -34,7 +34,7 @@ const Dropdown = ({
           <option key={show.id}>{show.name}</option>
         )}
       </select>
-      {hasErrored && showError && <p className='select-error-message' role='alert'>{errorMessage}</p>}
+      {hasErrored && showError && required && <p className='select-error-message' role='alert'>{errorMessage}</p>}
     </div>
   )
 }
