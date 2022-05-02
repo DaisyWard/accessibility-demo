@@ -37,7 +37,6 @@ function App() {
           <h3 className='as-h4'>Tell us a bit about yourself</h3>
         </div>
 
-
         <form>
           <div className='input-wrapper'>
             <TextField
@@ -71,7 +70,7 @@ function App() {
             errorMessage={'Please select a pet'}
           />
 
-          <h4 className='additional-header as-h3'>Some additional things we need to know...</h4>
+          <h3 className='additional-header as-h4'>Some additional things we need to know...</h3>
 
           <ToggleButtons
             data={toggleButtonData}
@@ -108,12 +107,18 @@ function App() {
             />
           }
 
-          {/* Set up Eslint A11y */}
-          <button className='button submit-button' type='button' aria-label='Submit personal details form' onClick={() => setErrorState(!errorState)}>Submit</button>
+          <button
+            className='button submit-button'
+            type='button'
+            aria-label='Submit personal details form'
+            onClick={() => setErrorState(!errorState)}
+          >
+            Submit
+          </button>
         </form>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
