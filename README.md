@@ -32,7 +32,6 @@ See extensions.js for the recommended plugin
 Accessibility Considerations
 - aria-required
 - aria-invalid
-- aria-required
 - Associated label with input without the label wrapping around the input
 - Role on error message
 - Error state and error message
