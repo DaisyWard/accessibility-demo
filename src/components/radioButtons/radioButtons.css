@@ -20,10 +20,6 @@
   cursor: pointer;
 }
 
-.radio-buttons-error-message {
-  /* color: red; */
-}
-
 .radio-button-error {
   box-shadow: 0 0 0 2px red;
 }
