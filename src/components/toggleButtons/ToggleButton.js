@@ -12,7 +12,8 @@ const ToggleButton = ({
       className={`toggle-button ${selected ? 'toggle-button-selected' : ''} ${hasError ? 'toggle-button-error' : ''}`}
       type='button'
       onClick={() => updateSelectedOption()}
-      aria-label={selected ? `${ariaLabel} selected` : `${ariaLabel}`}
+      aria-label={ariaLabel}
+      aria-pressed={selected}
     >
       {label}
     </button>
